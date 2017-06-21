@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>PIIO 个人信息填写</title>
+    <link rel="shortcunt icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="logo">
+            <h1>PIIO</h1>
+            <h2>与朋友一起，分享你的生活</h2>
+        </div>
+        <div class="box">
+            <form id="signup" action="index.html">
+                <label>昵称</label>
+                <div class="inputbox">
+                    <input type="text" name="up-mail" placeholder="昵称"/>
+                </div>
+                <label>性别</label>
+                <div class="sex-select">
+                    <div>
+                        <input type="radio" name="sex" value="male" id="male" checked="checked"/>
+                        <label for="male">男</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="sex" value="female" id="female"/>
+                        <label for="female">女</label>
+                    </div>
+
+                </div>
+                <label>生日</label>
+                <div class="birthday">
+                    <div class="yearbox">
+                        <select name="year" id="year">
+                            <option value>年</option>
+                            <option value="2017">2017</option>
+                            <option value="2017">2016</option>
+                            <option value="2017">2015</option>
+                        </select>
+                    </div>
+
+                    <div class="monthbox">
+                        <select name="month" id="month">
+                            <option value>月</option>
+                            <option value="2017">1</option>
+                            <option value="2017">2</option>
+                            <option value="2017">3</option>
+                        </select>
+                    </div>
+                    <div class="datebox">
+                        <select name="date" id="date">
+                            <option value>日</option>
+                            <option value="2017">1</option>
+                            <option value="2017">2</option>
+                            <option value="2017">3</option>
+                        </select>
+                    </div>
+
+
+                </div>
+                <label id="vc">验证码</label>
+                <div class="inputbox vctxt">
+                    <input type="text" name="randomcode" id="randomcode" placeholder="验证码">
+
+                </div>
+                    <img class="vrf-img" src="images/verification_code.png" alt="点击换一张" />
+                    <input type="submit" name="up-btn" class="up-btn" value="注册">
+                </div>
+                
+                
+            </form>
+        </div>
+    </div>
+</body>
+</html>
