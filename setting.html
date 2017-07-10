@@ -25,7 +25,7 @@
                         <div class="account-panel">
                             <ul>
                                 <li><a href="setting.html">设置</a></li>
-                                <li><a href="#">退出</a></li>
+                                <li><a href="signin.html">退出</a></li>
                             </ul>
                         </div>
                     </li>
@@ -94,46 +94,6 @@
         <a class="add-img" href="javascript:void(0)">添加图片</a>
         <button type="button" class="post-btn" name="button">发布</button>
     </div>
-    <script type="text/javascript">
-    function getScreenSize(){
-        var pageWidth = window.innerWidth,
-            pageHeight = window.innerHeight;
-        if (typeof pageWidth != "number"){
-            if (document.compatMode == "CSS1Compat"){
-                pageWidth = document.documentElement.clientWidth;
-                pageHeight = document.documentElement.clientHeight;
-            } else {
-                pageWidth = document.body.clientWidth;
-                pageHeight = document.body.clientHeight;
-            }
-        }
-        return [pageWidth, pageHeight];
-    }
-
-    var p = document.getElementsByClassName("post")[0];
-    var p_btn = document.getElementsByClassName("publish")[0];
-    var bg = document.getElementsByClassName("opacity-bg")[0];
-    var p_txt = document.getElementsByTagName("textarea")[0];
-    p_btn.onclick=function(){
-        //计算发布框的左偏移left和上偏移top
-        var size = getScreenSize();
-        console.log(size[0], size[1]);
-        var offleft = Math.floor( (size[0]-460)/2 );
-        var offtop = Math.floor( (size[1]-209)/2 );
-
-        p.style.left=offleft+"px";
-        p.style.top=offtop+"px";
-        bg.style.display = "block";
-        p.style.display = "block";
-    }
-    var close = document.getElementsByClassName("post-close")[0];
-    close.onclick= function(){
-        p_txt.value="";
-        bg.style.display = "none";
-        p.style.display = "none";
-    }
-
-
-    </script>
+    <script type="text/javascript" src="js/publish.js"></script>
 </body>
 </html>
