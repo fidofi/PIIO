@@ -10,6 +10,8 @@
 body{
     background: #ededef;
     color: #FFF;
+    /*复制于bilibili的字体设置*/
+    font-family: 'Helvetica Neue',Helvetica,Arial,'Microsoft Yahei','Hiragino Sans GB','Heiti SC','WenQuanYi Micro Hei',sans-serif !important;
 }
 a{
     color: #FFF;
@@ -48,8 +50,24 @@ li{
     margin-right: 44px;
 }
 .nav>ul>li{
+    position: relative;
     float: left;
     margin-left: 36px;
+}
+.nav>ul>li>a:hover{
+    color: #ffd000;
+}
+.num{
+    position: absolute;
+    top: 20px;
+    left: 32px;
+    height: 16px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 2px 6px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background: #eb0000;
 }
 .account-panel{
     display: none;
@@ -57,6 +75,16 @@ li{
 .account:hover .account-panel{
     display: block;
 }
+.account-panel li:hover{
+    background: #ffd000;
+}
+.panel1:hover{
+    border-radius: 4px 4px 0 0;
+}
+.panel2:hover{
+    border-radius: 0 0 4px 4px;
+}
+
 .publish{
     margin-top: 23px;
     float: right;
@@ -85,6 +113,7 @@ li{
     position: absolute;
     top: 76px;
     left: -25px;
+    cursor: pointer;
     z-index: 2;
 }
 .account-panel li{
