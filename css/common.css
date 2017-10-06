@@ -189,6 +189,7 @@ li{
     height: 73px;
     border: none;
     padding: 10px 17px 0;
+    outline-color: #ffd000;
 }
 .add-img{
     line-height: 30px;

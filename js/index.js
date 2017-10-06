@@ -29,56 +29,25 @@ window.onscroll = function () {
         //每个数组元素要求包含
         //用户头像路径、用户名、发布日期、图片路径、文本内容、（点赞数、评论暂时不用）
 
-        additem("images/user2.png", "Fstar", "今天 15:21", "images/img2.png", "你值得拥有。")
-        //创建节点的很多代码其实是一样的，写成函数提高复用。
-        //传入节点类型、类名。
-        //虽然想加一个函数参数来加入属性，比如id=“a”。不过不会写。
-        function addNode(classname, nodename){
-            //但nodename没指定时（只有一个参数），默认为div（最常用的节点）
-            var node = document.createElement(nodename||"div");
-            if(classname !== "")
-            {
-                node.className = classname;
-            }
-            return node;
-        }
+        //
+        additem("images/user4.png", "Fstar", "今天 15:21", "images/img2.png", "你值得拥有。");
+        additem("images/user4.png", "Fstar", "今天 15:21", "images/img2.png", "你值得拥有。");
+        additem("images/user4.png", "Fstar", "今天 15:21", "images/img2.png", "你值得拥有。");
+        additem("images/user4.png", "Fstar", "今天 15:21", "images/img2.png", "你值得拥有。");
+        additem("images/user4.png", "Fstar", "今天 15:21", "images/img2.png", "你值得拥有。");
 
-        //因为时间关系，没空研究好的写法。
+        //用户头像路径、用户名、发布日期、图片路径、文本内容、（点赞数、评论暂时不用）
+        //其次还要改说说的id号（主键）
         function additem(usericon, username, date, imgsrc, text){
-            // 第一级
-            var item = addNode("item");
-            // 第二级
-                var u_info = addNode("u-info");
-                    //第三级
-                    var u_icon = addNode("u-icon");
+            console.log("滚动到底部，加载5条消息");
+            var str = '<div class="item-main"><div class="u-info"><div class="u-icon"><img src="images/user3.png" alt="葵花妹" /></div><div class="name-pub"><div class="u-name"><a href="">葵花妹</a></div><div class="u-pub">今天 09:18</div></div></div><div class="itemcontent"><div class="thumbnail"><img src="images/img1.png" alt="img1"></div><div class="full-text"><p>你们是我走过的路…</p></div></div><div class="u-list"><ul><li><a href="#"><span>分享</span></a></li><li><a href="#"><span>评论</span><span>6</span></a></li><li><a href="#"><span>喜欢</span><span>124</span></a></li></ul></div></div>'
 
-                        //4
-                        var uimg = addNode("","img");
-                        uimg.src = usericon;
-                        uimg.alt = username;
-                        u_icon.appendChild(uimg)
-                        u_info.appendChild(u_icon);
-
-                    var name_pub = addNode("name-pub");
-                        var u_name = addNode("u-name");
-                        var u_name_txt = addNode("","a");
-                        u_name_txt.innerText = username;
-                        u_name.appendChild(u_name_txt);
-                        name_pub.appendChild(u_name);
-
-                        u_pub = addNode("u-pub");
-                        u_pub.innerText = date;
-                        name_pub.appendChild(u_pub);
-                        u_info.appendChild(name_pub);
-
-
-                var itemcontent = addNode("itemcontent");
-                var u_list = addNode("u-list");
-            //添加到div.content下。
-            item.appendChild(u_info);
-            item.appendChild(itemcontent);
-            item.appendChild(u_list);
+            var item = document.createElement("div");
+            var content = document.getElementsByClassName("content")[0];
+            item.className = "item";
+            item.innerHTML= str;
             content.appendChild(item);
+
         }
     }
 
